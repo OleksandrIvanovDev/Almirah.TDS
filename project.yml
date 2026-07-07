@@ -1,0 +1,18 @@
+specifications:
+  input:
+    - req
+
+risks:
+  - folder: fmea
+    columns: [Failure Mode, Severity, Occurrence, Detection, Mitigation, Affected Documents, Status]
+    rpn:
+      - name: Initial
+        inputs: [Severity, Occurrence, Detection]
+        thresholds:
+          acceptable: 50
+          unacceptable: 200
+      - name: Residual
+        inputs: [Residual Severity, Residual Occurrence, Residual Detection]
+        thresholds:
+          acceptable: 50
+          unacceptable: 200
