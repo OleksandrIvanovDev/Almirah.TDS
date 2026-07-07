@@ -1,0 +1,13 @@
+specifications:
+  input:
+    - req
+
+risks:
+  - folder: project
+    columns: [Probability, Impact, Response, Affected Documents, Status]
+    rpn:
+      - name: Initial
+        inputs: [Probability, Impact]
+        thresholds:
+          acceptable: 6
+          unacceptable: 15
