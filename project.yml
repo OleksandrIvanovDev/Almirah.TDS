@@ -1,0 +1,13 @@
+specifications:
+  input:
+    - req
+
+risks:
+  - folder: security
+    columns: [Threat, Vulnerability, Mitigation, Affected Documents, Status]
+    rpn:
+      - name: CVSS
+        inputs: [CVSS Score]
+        thresholds:
+          acceptable: 3.9
+          unacceptable: 9.0
