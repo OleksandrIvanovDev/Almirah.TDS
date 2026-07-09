@@ -1,0 +1,18 @@
+specifications:
+  input:
+    - req
+
+risks:
+  - folder: fta
+    columns: [Top Event, Minimal Cut Set, Severity, Likelihood, Mitigation, Affected Documents, Status]
+    rpn:
+      - name: Criticality
+        inputs: [Severity, Likelihood]
+        thresholds:
+          acceptable: 15
+          unacceptable: 35
+      - name: Residual
+        inputs: [Residual Severity, Residual Likelihood]
+        thresholds:
+          acceptable: 15
+          unacceptable: 35

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="560" viewBox="0 0 940 560" font-family="Verdana, Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="940" height="560" fill="#ffffff"/>
+  <text x="16" y="30" font-size="13" fill="#555555">TOP-1</text>
+
+  <!-- top event -->
+  <rect x="355" y="16" width="230" height="52" rx="4" fill="#fde8e8" stroke="#333333" stroke-width="1.5"/>
+  <text x="470" y="38" font-size="13" text-anchor="middle" fill="#111111">Permanent loss</text>
+  <text x="470" y="56" font-size="13" text-anchor="middle" fill="#111111">of user data</text>
+
+  <!-- AND gate G0 -->
+  <line x1="470" y1="68" x2="470" y2="92" stroke="#333333" stroke-width="1.5"/>
+  <path d="M 444 144 L 444 118 A 26 26 0 0 1 496 118 L 496 144 Z" fill="#eef2f7" stroke="#333333" stroke-width="1.5"/>
+  <text x="510" y="126" font-size="12" fill="#555555">G0: AND</text>
+
+  <!-- bus from AND gate to the two branches -->
+  <line x1="470" y1="144" x2="470" y2="168" stroke="#333333" stroke-width="1.5"/>
+  <line x1="230" y1="168" x2="670" y2="168" stroke="#333333" stroke-width="1.5"/>
+  <line x1="230" y1="168" x2="230" y2="192" stroke="#333333" stroke-width="1.5"/>
+  <line x1="670" y1="168" x2="670" y2="192" stroke="#333333" stroke-width="1.5"/>
+
+  <!-- intermediate event G1 -->
+  <rect x="130" y="192" width="200" height="52" rx="4" fill="#fff7e6" stroke="#333333" stroke-width="1.5"/>
+  <text x="230" y="214" font-size="13" text-anchor="middle" fill="#111111">Primary copy</text>
+  <text x="230" y="232" font-size="13" text-anchor="middle" fill="#111111">of the data is lost</text>
+
+  <!-- intermediate event G2 -->
+  <rect x="570" y="192" width="200" height="52" rx="4" fill="#fff7e6" stroke="#333333" stroke-width="1.5"/>
+  <text x="670" y="214" font-size="13" text-anchor="middle" fill="#111111">No usable backup</text>
+  <text x="670" y="232" font-size="13" text-anchor="middle" fill="#111111">is available</text>
+
+  <!-- OR gate under G1 -->
+  <line x1="230" y1="244" x2="230" y2="262" stroke="#333333" stroke-width="1.5"/>
+  <path d="M 230 262 Q 204 280 204 314 Q 230 298 256 314 Q 256 280 230 262 Z" fill="#eef2f7" stroke="#333333" stroke-width="1.5"/>
+  <text x="268" y="292" font-size="12" fill="#555555">G1: OR</text>
+
+  <!-- OR gate under G2 -->
+  <line x1="670" y1="244" x2="670" y2="262" stroke="#333333" stroke-width="1.5"/>
+  <path d="M 670 262 Q 644 280 644 314 Q 670 298 696 314 Q 696 280 670 262 Z" fill="#eef2f7" stroke="#333333" stroke-width="1.5"/>
+  <text x="708" y="292" font-size="12" fill="#555555">G2: OR</text>
+
+  <!-- bus to left basic events -->
+  <line x1="230" y1="308" x2="230" y2="340" stroke="#333333" stroke-width="1.5"/>
+  <line x1="80" y1="340" x2="380" y2="340" stroke="#333333" stroke-width="1.5"/>
+  <line x1="80" y1="340" x2="80" y2="376" stroke="#333333" stroke-width="1.5"/>
+  <line x1="230" y1="340" x2="230" y2="376" stroke="#333333" stroke-width="1.5"/>
+  <line x1="380" y1="340" x2="380" y2="376" stroke="#333333" stroke-width="1.5"/>
+
+  <!-- bus to right basic events -->
+  <line x1="670" y1="308" x2="670" y2="340" stroke="#333333" stroke-width="1.5"/>
+  <line x1="520" y1="340" x2="820" y2="340" stroke="#333333" stroke-width="1.5"/>
+  <line x1="520" y1="340" x2="520" y2="376" stroke="#333333" stroke-width="1.5"/>
+  <line x1="670" y1="340" x2="670" y2="376" stroke="#333333" stroke-width="1.5"/>
+  <line x1="820" y1="340" x2="820" y2="376" stroke="#333333" stroke-width="1.5"/>
+
+  <!-- basic events E1..E3 -->
+  <circle cx="80" cy="412" r="36" fill="#e8f3ec" stroke="#333333" stroke-width="1.5"/>
+  <text x="80" y="418" font-size="14" text-anchor="middle" fill="#111111">E1</text>
+  <text x="80" y="474" font-size="12" text-anchor="middle" fill="#333333">Disk hardware</text>
+  <text x="80" y="490" font-size="12" text-anchor="middle" fill="#333333">failure</text>
+
+  <circle cx="230" cy="412" r="36" fill="#e8f3ec" stroke="#333333" stroke-width="1.5"/>
+  <text x="230" y="418" font-size="14" text-anchor="middle" fill="#111111">E2</text>
+  <text x="230" y="474" font-size="12" text-anchor="middle" fill="#333333">Silent write</text>
+  <text x="230" y="490" font-size="12" text-anchor="middle" fill="#333333">corruption</text>
+
+  <circle cx="380" cy="412" r="36" fill="#e8f3ec" stroke="#333333" stroke-width="1.5"/>
+  <text x="380" y="418" font-size="14" text-anchor="middle" fill="#111111">E3</text>
+  <text x="380" y="474" font-size="12" text-anchor="middle" fill="#333333">Accidental bulk</text>
+  <text x="380" y="490" font-size="12" text-anchor="middle" fill="#333333">deletion</text>
+
+  <!-- basic events E4..E6 -->
+  <circle cx="520" cy="412" r="36" fill="#e8f3ec" stroke="#333333" stroke-width="1.5"/>
+  <text x="520" y="418" font-size="14" text-anchor="middle" fill="#111111">E4</text>
+  <text x="520" y="474" font-size="12" text-anchor="middle" fill="#333333">Backup job fails</text>
+  <text x="520" y="490" font-size="12" text-anchor="middle" fill="#333333">silently</text>
+
+  <circle cx="670" cy="412" r="36" fill="#e8f3ec" stroke="#333333" stroke-width="1.5"/>
+  <text x="670" y="418" font-size="14" text-anchor="middle" fill="#111111">E5</text>
+  <text x="670" y="474" font-size="12" text-anchor="middle" fill="#333333">Restore procedure</text>
+  <text x="670" y="490" font-size="12" text-anchor="middle" fill="#333333">never tested</text>
+
+  <circle cx="820" cy="412" r="36" fill="#e8f3ec" stroke="#333333" stroke-width="1.5"/>
+  <text x="820" y="418" font-size="14" text-anchor="middle" fill="#111111">E6</text>
+  <text x="820" y="474" font-size="12" text-anchor="middle" fill="#333333">Retention window</text>
+  <text x="820" y="490" font-size="12" text-anchor="middle" fill="#333333">too short</text>
+
+  <text x="470" y="540" font-size="12" text-anchor="middle" fill="#777777">Fault tree TOP-1: user data is permanently lost when the primary copy is lost while no usable backup exists.</text>
+</svg>
