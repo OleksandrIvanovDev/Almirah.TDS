@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="380" viewBox="0 0 940 380" font-family="Verdana, Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="940" height="380" fill="#ffffff"/>
+  <text x="16" y="30" font-size="13" fill="#555555">Current navigation path</text>
+
+  <!-- user -->
+  <rect x="60" y="150" width="160" height="52" rx="4" fill="#eef2f7" stroke="#333333" stroke-width="1.5"/>
+  <text x="140" y="181" font-size="13" text-anchor="middle" fill="#111111">User</text>
+
+  <!-- record list -->
+  <rect x="330" y="150" width="200" height="52" rx="4" fill="#fff7e6" stroke="#333333" stroke-width="1.5"/>
+  <text x="430" y="172" font-size="13" text-anchor="middle" fill="#111111">Record list</text>
+  <text x="430" y="190" font-size="12" text-anchor="middle" fill="#555555">sorted by last change</text>
+
+  <!-- filters -->
+  <rect x="330" y="60" width="200" height="52" rx="4" fill="#eef2f7" stroke="#333333" stroke-width="1.5"/>
+  <text x="430" y="82" font-size="13" text-anchor="middle" fill="#111111">Filters</text>
+  <text x="430" y="100" font-size="12" text-anchor="middle" fill="#555555">record type, author</text>
+
+  <!-- detail view -->
+  <rect x="640" y="150" width="200" height="52" rx="4" fill="#fff7e6" stroke="#333333" stroke-width="1.5"/>
+  <text x="740" y="172" font-size="13" text-anchor="middle" fill="#111111">Record detail view</text>
+  <text x="740" y="190" font-size="12" text-anchor="middle" fill="#555555">read and edit</text>
+
+  <!-- record store -->
+  <rect x="330" y="270" width="200" height="52" rx="4" fill="#eef2f7" stroke="#333333" stroke-width="1.5"/>
+  <text x="430" y="292" font-size="13" text-anchor="middle" fill="#111111">Record store</text>
+  <text x="430" y="310" font-size="12" text-anchor="middle" fill="#555555">titles and bodies</text>
+
+  <!-- user -> record list -->
+  <line x1="220" y1="176" x2="322" y2="176" stroke="#333333" stroke-width="1.5"/>
+  <path d="M 322 176 L 312 171 L 312 181 Z" fill="#333333"/>
+  <text x="270" y="168" font-size="12" text-anchor="middle" fill="#555555">scroll</text>
+
+  <!-- filters -> record list -->
+  <line x1="430" y1="112" x2="430" y2="142" stroke="#333333" stroke-width="1.5"/>
+  <path d="M 430 142 L 425 132 L 435 132 Z" fill="#333333"/>
+
+  <!-- record list -> detail view -->
+  <line x1="530" y1="176" x2="632" y2="176" stroke="#333333" stroke-width="1.5"/>
+  <path d="M 632 176 L 622 171 L 622 181 Z" fill="#333333"/>
+  <text x="580" y="168" font-size="12" text-anchor="middle" fill="#555555">select</text>
+
+  <!-- record store -> record list -->
+  <line x1="430" y1="270" x2="430" y2="210" stroke="#333333" stroke-width="1.5"/>
+  <path d="M 430 210 L 425 220 L 435 220 Z" fill="#333333"/>
+  <text x="444" y="244" font-size="12" fill="#555555">metadata only</text>
+
+  <!-- gap note -->
+  <rect x="640" y="270" width="240" height="52" rx="4" fill="#fde8e8" stroke="#333333" stroke-width="1.5"/>
+  <text x="760" y="292" font-size="13" text-anchor="middle" fill="#111111">Gap: no way to search</text>
+  <text x="760" y="310" font-size="13" text-anchor="middle" fill="#111111">the record content</text>
+</svg>

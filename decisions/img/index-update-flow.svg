@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="300" viewBox="0 0 940 300" font-family="Verdana, Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="940" height="300" fill="#ffffff"/>
+  <text x="16" y="30" font-size="13" fill="#555555">Index update flow</text>
+
+  <!-- record change -->
+  <rect x="40" y="110" width="180" height="52" rx="4" fill="#eef2f7" stroke="#333333" stroke-width="1.5"/>
+  <text x="130" y="132" font-size="13" text-anchor="middle" fill="#111111">Record created,</text>
+  <text x="130" y="150" font-size="13" text-anchor="middle" fill="#111111">changed, or deleted</text>
+
+  <!-- record store -->
+  <rect x="270" y="110" width="160" height="52" rx="4" fill="#fff7e6" stroke="#333333" stroke-width="1.5"/>
+  <text x="350" y="132" font-size="13" text-anchor="middle" fill="#111111">Record store</text>
+  <text x="350" y="150" font-size="12" text-anchor="middle" fill="#555555">emits change event</text>
+
+  <!-- indexer -->
+  <rect x="480" y="110" width="160" height="52" rx="4" fill="#fff7e6" stroke="#333333" stroke-width="1.5"/>
+  <text x="560" y="132" font-size="13" text-anchor="middle" fill="#111111">Indexer</text>
+  <text x="560" y="150" font-size="12" text-anchor="middle" fill="#555555">incremental update</text>
+
+  <!-- full-text index -->
+  <rect x="690" y="110" width="200" height="52" rx="4" fill="#eef2f7" stroke="#333333" stroke-width="1.5"/>
+  <text x="790" y="132" font-size="13" text-anchor="middle" fill="#111111">Full-text index</text>
+  <text x="790" y="150" font-size="12" text-anchor="middle" fill="#555555">persistent</text>
+
+  <!-- search service -->
+  <rect x="480" y="220" width="160" height="52" rx="4" fill="#fff7e6" stroke="#333333" stroke-width="1.5"/>
+  <text x="560" y="242" font-size="13" text-anchor="middle" fill="#111111">Search service</text>
+  <text x="560" y="260" font-size="12" text-anchor="middle" fill="#555555">answers queries</text>
+
+  <!-- arrows along the pipeline -->
+  <line x1="220" y1="136" x2="262" y2="136" stroke="#333333" stroke-width="1.5"/>
+  <path d="M 262 136 L 252 131 L 252 141 Z" fill="#333333"/>
+
+  <line x1="430" y1="136" x2="472" y2="136" stroke="#333333" stroke-width="1.5"/>
+  <path d="M 472 136 L 462 131 L 462 141 Z" fill="#333333"/>
+
+  <line x1="640" y1="136" x2="682" y2="136" stroke="#333333" stroke-width="1.5"/>
+  <path d="M 682 136 L 672 131 L 672 141 Z" fill="#333333"/>
+
+  <!-- index -> search service -->
+  <line x1="790" y1="162" x2="790" y2="246" stroke="#333333" stroke-width="1.5"/>
+  <line x1="790" y1="246" x2="648" y2="246" stroke="#333333" stroke-width="1.5"/>
+  <path d="M 648 246 L 658 241 L 658 251 Z" fill="#333333"/>
+
+  <!-- latency note -->
+  <rect x="40" y="220" width="330" height="52" rx="4" fill="#fde8e8" stroke="#333333" stroke-width="1.5"/>
+  <text x="205" y="242" font-size="13" text-anchor="middle" fill="#111111">Bounded latency: the index reflects</text>
+  <text x="205" y="260" font-size="13" text-anchor="middle" fill="#111111">the change within 5 seconds</text>
+</svg>
