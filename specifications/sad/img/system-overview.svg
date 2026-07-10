@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="360" viewBox="0 0 940 360" font-family="Verdana, Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="940" height="360" fill="#ffffff"/>
+  <text x="16" y="30" font-size="13" fill="#555555">System overview</text>
+
+  <!-- patient -->
+  <rect x="40" y="120" width="150" height="90" rx="4" fill="#eef2f7" stroke="#333333" stroke-width="1.5"/>
+  <text x="115" y="160" font-size="13" text-anchor="middle" fill="#111111">Patient</text>
+  <text x="115" y="180" font-size="12" text-anchor="middle" fill="#555555">SpO2 probe,</text>
+  <text x="115" y="196" font-size="12" text-anchor="middle" fill="#555555">ECG electrodes</text>
+
+  <!-- monitor -->
+  <rect x="290" y="90" width="240" height="150" rx="4" fill="#fff7e6" stroke="#333333" stroke-width="2"/>
+  <text x="410" y="120" font-size="13" text-anchor="middle" fill="#111111">Bedside patient monitor</text>
+  <rect x="310" y="140" width="200" height="34" rx="4" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <text x="410" y="162" font-size="12" text-anchor="middle" fill="#555555">screen: HR, SpO2, alarms</text>
+  <rect x="310" y="186" width="200" height="34" rx="4" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <text x="410" y="208" font-size="12" text-anchor="middle" fill="#555555">local audible annunciator</text>
+
+  <!-- clinician -->
+  <rect x="290" y="290" width="240" height="50" rx="4" fill="#eef2f7" stroke="#333333" stroke-width="1.5"/>
+  <text x="410" y="312" font-size="13" text-anchor="middle" fill="#111111">Clinician</text>
+  <text x="410" y="330" font-size="12" text-anchor="middle" fill="#555555">authenticated limit changes</text>
+
+  <!-- network -->
+  <rect x="610" y="130" width="130" height="70" rx="35" fill="#eef2f7" stroke="#333333" stroke-width="1.5"/>
+  <text x="675" y="160" font-size="13" text-anchor="middle" fill="#111111">Hospital</text>
+  <text x="675" y="178" font-size="13" text-anchor="middle" fill="#111111">network</text>
+
+  <!-- nurse station -->
+  <rect x="790" y="120" width="130" height="90" rx="4" fill="#fff7e6" stroke="#333333" stroke-width="1.5"/>
+  <text x="855" y="155" font-size="13" text-anchor="middle" fill="#111111">Nurse</text>
+  <text x="855" y="173" font-size="13" text-anchor="middle" fill="#111111">station</text>
+  <text x="855" y="196" font-size="12" text-anchor="middle" fill="#555555">many beds</text>
+
+  <!-- patient -> monitor -->
+  <line x1="190" y1="165" x2="282" y2="165" stroke="#333333" stroke-width="1.5"/>
+  <path d="M 282 165 L 272 160 L 272 170 Z" fill="#333333"/>
+  <text x="236" y="157" font-size="12" text-anchor="middle" fill="#555555">sensor signals</text>
+
+  <!-- clinician -> monitor -->
+  <line x1="410" y1="290" x2="410" y2="248" stroke="#333333" stroke-width="1.5"/>
+  <path d="M 410 248 L 405 258 L 415 258 Z" fill="#333333"/>
+
+  <!-- monitor -> network -->
+  <line x1="530" y1="165" x2="602" y2="165" stroke="#333333" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M 602 165 L 592 160 L 592 170 Z" fill="#333333"/>
+
+  <!-- network -> nurse station -->
+  <line x1="740" y1="165" x2="782" y2="165" stroke="#333333" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M 782 165 L 772 160 L 772 170 Z" fill="#333333"/>
+  <text x="656" y="230" font-size="12" fill="#555555">dashed: no safety function on this path</text>
+</svg>

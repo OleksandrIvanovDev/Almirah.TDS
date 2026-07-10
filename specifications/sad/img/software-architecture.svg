@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="480" viewBox="0 0 940 480" font-family="Verdana, Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="940" height="480" fill="#ffffff"/>
+  <text x="16" y="30" font-size="13" fill="#555555">Software architecture</text>
+
+  <!-- safety core boundary -->
+  <rect x="40" y="60" width="560" height="250" rx="6" fill="none" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="8 5"/>
+  <text x="56" y="84" font-size="12" fill="#c0392b">Safety core (SAD-002)</text>
+
+  <!-- measurement module -->
+  <rect x="70" y="110" width="220" height="70" rx="4" fill="#fde8e8" stroke="#333333" stroke-width="1.5"/>
+  <text x="180" y="140" font-size="13" text-anchor="middle" fill="#111111">Measurement Module</text>
+  <text x="180" y="160" font-size="12" text-anchor="middle" fill="#555555">SAD-010</text>
+
+  <!-- alarm module -->
+  <rect x="350" y="110" width="220" height="70" rx="4" fill="#fde8e8" stroke="#333333" stroke-width="1.5"/>
+  <text x="460" y="140" font-size="13" text-anchor="middle" fill="#111111">Alarm Module</text>
+  <text x="460" y="160" font-size="12" text-anchor="middle" fill="#555555">SAD-012</text>
+
+  <!-- system supervisor -->
+  <rect x="70" y="220" width="500" height="60" rx="4" fill="#fde8e8" stroke="#333333" stroke-width="1.5"/>
+  <text x="320" y="246" font-size="13" text-anchor="middle" fill="#111111">System Supervisor</text>
+  <text x="320" y="266" font-size="12" text-anchor="middle" fill="#555555">SAD-015: self-test, watchdog over the safety core</text>
+
+  <!-- display module -->
+  <rect x="660" y="110" width="240" height="70" rx="4" fill="#fff7e6" stroke="#333333" stroke-width="1.5"/>
+  <text x="780" y="140" font-size="13" text-anchor="middle" fill="#111111">Display Module</text>
+  <text x="780" y="160" font-size="12" text-anchor="middle" fill="#555555">SAD-011</text>
+
+  <!-- trend storage -->
+  <rect x="70" y="360" width="240" height="70" rx="4" fill="#eef2f7" stroke="#333333" stroke-width="1.5"/>
+  <text x="190" y="390" font-size="13" text-anchor="middle" fill="#111111">Trend Storage Module</text>
+  <text x="190" y="410" font-size="12" text-anchor="middle" fill="#555555">SAD-013</text>
+
+  <!-- connectivity -->
+  <rect x="360" y="360" width="240" height="70" rx="4" fill="#eef2f7" stroke="#333333" stroke-width="1.5"/>
+  <text x="480" y="390" font-size="13" text-anchor="middle" fill="#111111">Connectivity Module</text>
+  <text x="480" y="410" font-size="12" text-anchor="middle" fill="#555555">SAD-014</text>
+
+  <!-- configuration and audit -->
+  <rect x="660" y="360" width="240" height="70" rx="4" fill="#eef2f7" stroke="#333333" stroke-width="1.5"/>
+  <text x="780" y="390" font-size="13" text-anchor="middle" fill="#111111">Configuration and Audit</text>
+  <text x="780" y="410" font-size="12" text-anchor="middle" fill="#555555">SAD-016</text>
+
+  <!-- measurement -> alarm -->
+  <line x1="290" y1="145" x2="342" y2="145" stroke="#333333" stroke-width="1.5"/>
+  <path d="M 342 145 L 332 140 L 332 150 Z" fill="#333333"/>
+  <text x="316" y="137" font-size="11" text-anchor="middle" fill="#555555">samples</text>
+
+  <!-- alarm -> display -->
+  <line x1="570" y1="145" x2="652" y2="145" stroke="#333333" stroke-width="1.5"/>
+  <path d="M 652 145 L 642 140 L 642 150 Z" fill="#333333"/>
+  <text x="611" y="137" font-size="11" text-anchor="middle" fill="#555555">states</text>
+
+  <!-- supervisor -> measurement and alarm (watchdog) -->
+  <line x1="180" y1="220" x2="180" y2="188" stroke="#333333" stroke-width="1.5"/>
+  <path d="M 180 188 L 175 198 L 185 198 Z" fill="#333333"/>
+  <line x1="460" y1="220" x2="460" y2="188" stroke="#333333" stroke-width="1.5"/>
+  <path d="M 460 188 L 455 198 L 465 198 Z" fill="#333333"/>
+
+  <!-- samples to trend storage -->
+  <line x1="180" y1="310" x2="180" y2="352" stroke="#333333" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M 180 352 L 175 342 L 185 342 Z" fill="#333333"/>
+
+  <!-- samples and alarms to connectivity -->
+  <line x1="470" y1="310" x2="470" y2="352" stroke="#333333" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M 470 352 L 465 342 L 475 342 Z" fill="#333333"/>
+
+  <!-- config -> alarm limits (upward, one way in) -->
+  <line x1="780" y1="360" x2="780" y2="330" stroke="#333333" stroke-width="1.5"/>
+  <line x1="780" y1="330" x2="612" y2="330" stroke="#333333" stroke-width="1.5"/>
+  <line x1="612" y1="330" x2="612" y2="184" stroke="#333333" stroke-width="1.5"/>
+  <line x1="612" y1="184" x2="578" y2="167" stroke="#333333" stroke-width="1.5"/>
+  <path d="M 578 167 L 585 176 L 590 167 Z" fill="#333333"/>
+  <text x="700" y="322" font-size="11" text-anchor="middle" fill="#555555">validated limits</text>
+
+  <!-- legend -->
+  <text x="40" y="462" font-size="12" fill="#555555">Dashed data flows leave the safety core; nothing outside the core can write into it except validated limits.</text>
+</svg>
